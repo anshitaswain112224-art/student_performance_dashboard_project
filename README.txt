@@ -1,57 +1,94 @@
+
 # Student Performance Interactive Dashboard
 
-This dashboard converts the analysis in `student_performance_anshita(2).ipynb` into an interactive Plotly Dash web app.
+This project converts the analysis performed in `student_performance_anshita(2).ipynb` into an interactive web dashboard using Python, Plotly and Dash.
 
-## 1. Put the files together
+The dashboard allows users to explore student academic performance and understand patterns through interactive charts and visualizations.
+
+## 1. Project Setup
 
 Keep `app.py` in a folder with the original dataset CSV files:
 
 - `student-mat.csv`
 - `student-por.csv`
 
-The original notebook reads these files using a semicolon (`;`) separator. The app detects this automatically.
+The original notebook reads these files using a semicolon (`;`) separator. The application detects this automatically.
 
-If you do not have the CSV files beside `app.py`, start the app anyway and upload the CSV file(s) through the dashboard. You can upload both original files together or one combined CSV.
+If the CSV files are not available in the same folder, you can upload them directly through the dashboard.
 
-## 2. Install the libraries
+You can upload both original files or one combined CSV file.
 
-Open Terminal in this folder and run:
+## 2. Install Required Libraries
+
+Open Terminal in the project folder and run:
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
 
-## 3. Run the dashboard
+## 3. Run the Dashboard
+
+Execute the following command in Terminal:
 
 ```bash
 python3 app.py
 ```
 
-Then open this address in your browser:
+Open the following address in your web browser:
 
 http://127.0.0.1:8050
 
-Keep the Terminal window running while you use the dashboard. Press `Control + C` in Terminal to stop it.
+Keep the Terminal window running while using the dashboard.
 
-## Dashboard contents
+To stop the application, press `Control + C` in Terminal.
 
-- KPI cards: student count, average final grade, excellent-grade share, average absences
-- Final grade distribution
-- Grade category comparisons by school and gender
-- Study time, past failures and travel time comparisons
-- Parental education vs final grade
-- Internet access comparison
-- Numeric correlation heatmap
-- Filterable and sortable student-record preview
+## 4. Dashboard Features
 
-## Grade categories
+The interactive dashboard includes:
 
-The notebook's original thresholds are preserved:
+- **KPI Cards:** Total number of students, average final grade, percentage of excellent performers and average absences.
+- **Final Grade Distribution:** Visual representation of Poor, Fair and Excellent grade categories.
+- **School Comparison:** Comparison of academic performance across schools.
+- **Gender Comparison:** Analysis of grade categories by gender.
+- **Study Time Analysis:** Relationship between study time and academic performance.
+- **Previous Failures:** Comparison of academic performance based on previous failures.
+- **Travel Time Analysis:** Exploration of travel time and final grades.
+- **Parental Education:** Comparison of parental education levels with students' grades.
+- **Internet Access:** Analysis of academic performance based on internet availability.
+- **Correlation Heatmap:** Visualization of relationships between numerical variables.
+- **Student Records:** Interactive, sortable and filterable student data table.
 
-- Poor: final grade <= 11
-- Fair: final grade 12–15
-- Excellent: final grade > 15
+## 5. Grade Categories
 
-## Important note
+The dashboard follows the grade classification used in the original notebook:
 
-The uploaded notebook contains analysis code but does not contain the raw `student-mat.csv` and `student-por.csv` data files. The app therefore loads those CSV files from the same folder if present, or lets you upload them in the app. It does not invent student records.
+| Grade Category | Final Grade |
+|---|---|
+| Poor | Less than or equal to 11 |
+| Fair | 12–15 |
+| Excellent | Greater than 15 |
+
+## 6. Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Plotly
+- Dash
+- HTML and CSS
+
+## 7. Dataset Information
+
+The project uses the Student Performance dataset, containing information about students' academic results, personal backgrounds, family characteristics and study habits.
+
+The uploaded Jupyter Notebook contains the analysis code but does not include the original CSV files (`student-mat.csv` and `student-por.csv`).
+
+Therefore, the application loads the CSV files from the project folder when available or allows users to upload them through the dashboard.
+
+No artificial student records are generated.
+
+## 8. Project Objective
+
+The main objective of this project is to transform the findings from data analysis into an interactive dashboard.
+
+It provides an accessible way to explore student performance, identify patterns and understand relationships between academic results and different influencing factors.
